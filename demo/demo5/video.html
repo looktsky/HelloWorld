@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>H5video</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        body{
+            font-family: "Microsoft YaHei ";
+        }
+        .video{
+            overflow: hidden;
+            position: relative;
+            width:800px;
+            margin: 100px auto;
+            background: black;
+        }
+        .video-message{
+            color: white;
+            font-size: 12px;
+            position: absolute;
+            top:10px;
+            left: 10px;
+            line-height: 12px;
+            width:300px;
+            height: 12px;
+            overflow: hidden;
+        }
+        .video-body{
+            width:100%;
+            padding: 10% 0px;
+            display: block;
+            margin: 0 auto;
+        }
+        .video-control{
+            z-index: 50;
+            visibility: hidden;
+            font-size: 0;
+            background-color:black;
+            height: 90px;
+            width: 800px;
+            position: absolute;
+            bottom: 0px;
+            left:0px;
+        }
+        .video-control>section{
+            width: 800px;
+            height: 30px;
+            position: relative;
+        }
+        .video-control-timeBar>div{
+            width: 790px;
+            height: 2px;
+            position: absolute;
+            top: 14px;
+            left: 5px;
+
+        }
+        .video-control-timeBar-durationBar{
+            z-index: 100;
+            background-color: azure;
+        }
+        .video-control-timeBar-bufferBar{
+            z-index: 200;
+            background-color: darkgray;
+        }
+        .video-control-timeBar .video-control-timeBar-currentBar{
+            z-index: 300;
+            width:14px;
+            background-color: darkorange;
+        }
+        .video-control-timeBar-currentBar .bufferRec{
+            cursor: pointer;
+            height: 14px;
+            width: 14px;
+            border:2px solid darkorange;
+            border-radius: 50%;
+            position: absolute;
+            top:-8px;
+            right:0px;
+            background-color: azure;
+            z-index: 400;
+        }
+        .video-control .video-control-show{
+            height: 18px;
+        }
+        .video-control-show>div{
+            color: #fff;
+            height: 18px;
+            line-height: 18px;
+            font-size: 18px;
+            margin: 0 5px;
+        }
+        .video-control-show-currentTime{
+            float: left;
+        }
+        .video-control-show-durationTime{
+            float: right;
+        }
+        .video-control .video-control-btn{
+            color: #fff;
+            vertical-align: middle;
+            font-weight: bold;
+            line-height: 24px;
+            font-size: 24px;
+            height:42px;
+        }
+        .video-control-btn>div{
+            float: left;
+            height: 24px;
+            margin-top: 9px;
+            cursor: pointer;
+            width:24px;
+            border-radius: 4px;
+        }
+        .video-control-btn-play:hover,.video-control-btn-fullScreen:hover{
+            background-color: goldenrod;
+        }
+        .video-control-btn-play{
+            background: url("img/play.png") no-repeat;
+            margin-left:5px;
+        }
+        .video-control-btn .video-control-btn-volume{
+            cursor: auto;
+            background: url("img/volume.png") no-repeat;
+            margin-left: 30px;
+
+        }
+        .video-control-btn .video-control-btn-volumeBar{
+            position: relative;
+            width:100px;
+            height: 2px;
+            margin-left: 10px;
+            margin-top: 20px;
+            cursor: auto;
+            border:none;
+            background-color: darkgray;
+        }
+        .video-control-btn-volumeBar .volumeValue{
+            width:100px;
+            height: 2px;
+            background-color: darkorange;
+            position: absolute;
+            top: 0px;
+            left:0px;
+        }
+        .volumeValue .volumeRec{
+            cursor: pointer;
+            height: 10px;
+            width: 10px;
+            border:1px solid darkorange;
+            border-radius: 50%;
+            position: absolute;
+            top:-5px;
+            right:0px;
+            background-color: azure;
+        }
+        .video-control .video-control-btn-fullScreen{
+            background-image: url("img/full.png");
+            background-repeat: no-repeat;
+            float: right;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body ondragstart ="return false" oncontextmenu ="return false">
+<section class="video" >
+    <p class="video-message"></p>
+
+    <!--视频播放区域-->
+    <video class="video-body"  poster="img/poster.png" preload="auto"  src="video/oceans.mp4" >
+        <!--<source type="video/mp4" src="http://vjs.zencdn.net/v/oceans.mp4" >您的浏览器播放不了H5视频！-->
+    </video>
+
+
+    <!--底部控制区域-->
+    <section class="video-control">
+
+
+        <!--显示进度条-->
+        <section class="video-control-timeBar">
+            <div class="video-control-timeBar-durationBar"></div>
+            <div class="video-control-timeBar-bufferBar"></div>
+            <div class="video-control-timeBar-currentBar">
+                <div class="bufferRec"></div>
+            </div>
+        </section>
+
+
+        <!--显示播放时间-->
+        <section class="video-control-show">
+            <div class="video-control-show-currentTime">00:00:00</div>
+            <div class="video-control-show-durationTime">00:00:00</div>
+        </section>
+
+
+        <!--音量 全屏 控制栏-->
+        <section class="video-control-btn">
+            <div class="video-control-btn-play"></div>
+            <div class="video-control-btn-volume"></div>
+            <div class="video-control-btn-volumeBar">
+                <div class="volumeValue">
+                    <div class="volumeRec"></div>
+                </div>
+            </div>
+            <div class="video-control-btn-fullScreen"></div>
+        </section>
+    </section>
+</section>
+<script src="js/jquery-1.12.3.js"></script>
+<script src="js/video.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冒泡排序</title>
+</head>
+<body>
+
+</body>
+<script>
+    window.onload = function () {
+        var arrOne = [2,10,-10,29,34,32,34,2,23,22,23,23,43,344,98,87];
+//        对数组进行冒泡排序并返回这个数组
+        function sortArr(arr) {
+            for(var i = 0;i < arr.length-1;i++){
+                for(var j = 0;j < arr.length-1-i;j++){
+                    if(arr[j]>arr[j+1]){
+                        var tmp = arr[j];
+                        arr[j] = arr[j+1];
+                        arr[j+1] = tmp;
+                    }
+                }
+            }
+            return arr;
+        }
+        console.log( sortArr(arrOne))
+
+    }
+</script>
+</html>

@@ -1,0 +1,115 @@
+<DOCTYPE html>
+<html lang="en">
+    <head >
+        <meta charset="utf-8">
+        <title>作品大杂烩 by 杨佳澍</title>
+        <link type="text/css" rel="stylesheet" href="css/other.css">
+        <link rel="icon" href="img/lkt.ico">
+        <script type="text/javascript">
+        // 回调函数 
+        function bdcb(data) {
+            var oul = document.getElementById('bdUl');
+            var html = '';
+            if (data.s.length) {
+                oul.style.visibility = 'visible';
+                for (var i=0; i<data.s.length; i++) {
+                    html += '<li><a target="_blank" href="http://www.baidu.com/s?wd='+data.s[i]+'">'+ data.s[i] +'</a></li>';
+                }
+                oul.innerHTML = html;
+            } else {
+                oul.style.visibility = 'hidden';
+            }
+        }
+        </script>
+        <script src="js/jquery-1.12.3.js"></script>
+        <script src="js/other.js"></script>
+
+    </head>
+    <body>
+        <div class="demo" >
+            <!-- 顶部标题 -->
+            <h2>小钢琴</h2>
+            <div id="top_title">    
+                <ul>
+                    <li id="piano_0" class="piano">L</li>
+                    <li id="piano_1" class="piano">o</li>
+                    <li id="piano_2" class="piano">o</li>
+                    <li id="piano_3" class="piano">k</li>
+                    <li id="piano_4" class="piano">t</li>
+                    <li id="piano_5" class="piano">s</li>
+                    <li id="piano_6" class="piano">k</li>
+                    <li id="piano_7" class="piano">y</li>
+                    <div id="top_title_key" title="琴谱开关"><a style="cursor:pointer">Open</a></div>
+                </ul>
+                <div id="piano">
+                    <ul>
+                        <li>A</li>
+                        <li>S</li>
+                        <li>D</li>
+                        <li>F</li>
+                        <li>G</li>
+                        <li>H</li>
+                        <li>J</li>
+                        <li>K</li>
+                    </ul>
+                    <div id="piano_middle">  <!-- 顶部下拉菜单 -->
+                        <div id="piano_left"><a style="cursor:pointer"></a></div>
+                        <div id="piano_right"><a style="cursor:pointer"></a></div>
+                    </div>
+                    <!-- 顶部标题音频 -->
+                    <audio preload = "auto" src="music/mu0.mp3"></audio>
+                    <audio preload = "auto" src="music/mu1.mp3"></audio>
+                    <audio preload = "auto" src="music/mu2.mp3"></audio>
+                    <audio preload = "auto" src="music/mu3.mp3"></audio>
+                    <audio preload = "auto" src="music/mu4.mp3"></audio>
+                    <audio preload = "auto" src="music/mu5.mp3"></audio>
+                    <audio preload = "auto" src="music/mu6.mp3"></audio>
+                    <audio preload = "auto" src="music/mu7.mp3"></audio>
+                    <!-- 背景音乐音频 -->
+                    <audio preload = "auto" loop = "loop"  src="music/韩红-绒花(电影《小花》插曲).mp3"></audio>
+                </div>
+            </div>
+            <!-- 左侧上面的背景音乐开关 -->
+            <div title="背景音乐开关" id="plug_music"> 
+                <a style="cursor:pointer" title="背景音乐开关"></a>
+            </div>           
+        </div>
+        <div class="demo">
+            <h2>百度搜索栏下拉列表</h2>
+            <img src="img/bd_logo1.png" height="258" width="540" alt="百度一下">
+            <form class="bdfor" name="form1">
+                <input id="bdkw" type="text" name="kw" value="" placeholder="">
+                <input  id="bdsu" type="button"  name = "su" value="百度一下" >
+            </form>
+            <ul id="bdUl"></ul>
+        </div>
+        <div class="demo">
+            <h2>本站LKT账号</h2>
+            <!-- 留言展示区域 -->
+            <div class="lycontent">显示更多...</div>
+            <form action="#" method="post" class="form1">
+                <div ><p class="status"></p></div>
+                <!-- 账号注册 -->
+                <div class="lktzc">
+                    <h3>注册LKT账号</h3>
+                    <p>用户名:<input type="text" name="username" class="usernamezc"></p>
+                    <p id="zcUserNameMsg"></p>
+                    <p>密&nbsp;&nbsp;&nbsp;码:<input type="password" name="password" class="passwordzc"></p>
+                    <p><input type="button" name="zc" value="注册" class="butzc"></p>
+                </div>
+                <!-- 账号登录 -->
+                <div class="lktlg">
+                    <h3>登录LKT账号</h3>
+                    <p>用户名:<input type="text" name="username" class="usernamelg"></p>
+                    <p>密&nbsp;&nbsp;&nbsp;码:<input type="password" name="password" class="passwordlg"></p>
+                    <p><input type="button" name="lg" value="登录" class="butlg"></p>
+                </div>
+                <div class="lktly">
+                    <h3>留言板在这里</h3>
+                    <textarea class="content"></textarea>
+                    <p><input type="button" name="send" value="留言" class="butly"></p>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

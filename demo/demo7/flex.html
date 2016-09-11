@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body>div{
+            display: flex;
+            height: 200px;
+            width: 100%;
+        }
+        body>div>div{
+            color: #ffff00;
+        }
+        body>div>div:nth-of-type(2n-1){
+            background-color: red;
+        }
+        body>div>div:nth-of-type(2n){
+            background-color: black;
+        }
+
+        
+        .box1 >div{
+            height:300px;
+        }
+        .box1 .item2{
+
+            width:100px;
+            height: 200px;
+        }
+        .box1 .item1{
+            flex: 1;
+        }
+
+
+
+        .box2 >div{
+            flex: 1;
+        }
+        .box2 .item2{
+            flex: inherit;
+            width:800px;
+        }
+
+        body .box3{
+            flex-wrap: wrap;
+        }
+        .box3 >div{
+            width:200px;
+            margin: 10px;
+        }
+
+        body .box4{
+            flex-direction:column;
+            height: 800px;
+        }
+        .box4 >div{
+            height: 200px;
+            width:200px;
+            margin: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="box1">
+    <div class="item1">1111111111111</div>
+    <div class="item2">2222222222222</div>
+</div>
+<div class="box2">
+    <div class="item1">1111111111111</div>
+    <div class="item2">2222222222222</div>
+    <div class="item3">33333333333</div>
+</div>
+<div class="box3">
+    <div class="item1">1111111111111</div>
+    <div class="item2">2222222222222</div>
+    <div class="item3">33333333333</div>
+    <div class="item4">4444444444444</div>
+    <div class="item5">555555555</div>
+    <div class="item6">66666666666</div>
+    <div class="item7">77777777777</div>
+</div>
+<div class="box4">
+    <div class="item1">1111111111111</div>
+    <div class="item2">2222222222222</div>
+    <div class="item3">33333333333</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,232 @@
+/* 
+* @Author: anchen
+* @Date:   2016-05-30 21:27:36
+* @Last Modified by:   anchen
+* @Last Modified time: 2016-06-03 23:02:08
+*/
+body,ul,li,p,h1,h2,h3,input{margin: 0;padding: 0;}
+img,input{border: none;}
+input{background: none;}
+a{text-decoration:none;}
+li,ul,ol{list-style: none;}
+
+body{
+    font: 12px/12px SimSun, sans-serif;
+    overflow: scroll;
+}
+
+#wrapper{
+    width: 100%;
+    height: 1340px;
+    min-width: 1280px;
+    background: url(../img/askdao/backImg.jpg) no-repeat center top;
+    position: relative;
+    overflow: hidden;
+}
+#logo{
+    width: 180px;
+    height: 160px;
+    position: absolute;
+    left: 86px;
+    top: 10px;
+}
+#logo a{
+    display: block;
+    width: 180px;
+    height: 160px;
+    background: url(../img/askdao/f_spr.png) no-repeat 0px 0px;
+    text-indent: -999em;
+}
+#web{
+    text-indent: -999em;
+    position: absolute;
+    top: 58px;
+    right:15px;
+    display: block;
+    width:187px;
+    height:54px;
+    background: url(../img/askdao/f_spr.png) 0px -460px no-repeat; 
+}
+#card{
+    text-indent: -9999em;
+    position: absolute;
+    top: 358px;
+    right:0px;
+    display: block;
+    width:200px;
+    height:260px;
+    background: url(../img/askdao/f_spr.png) -250px 0px no-repeat; 
+}
+
+
+#water{
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    margin-left:-960px;
+    width: 100%;
+    height: 840px;
+}
+
+
+
+
+
+#middle{
+    position: relative;
+    width: 1280px;
+    margin:0 auto;
+}
+#slogan{
+    position: absolute;
+    right:0px;
+    top: 0px; 
+}
+#video{
+    display: block;
+    width: 51px;
+    height: 51px;
+    position: absolute;
+    top: 466px;
+    left: 940px;
+    background: url(../img/askdao/f_spr.png) no-repeat -187px -460px;
+    text-indent: -999em;
+}
+#flash{
+    position: absolute;
+    left: 655px;
+    top:458px;
+}
+#flash a{
+    width: 120px;
+    height: 120px;
+}
+#download{
+    position: absolute;
+    top: 566px;
+    right:100px;
+    width: 386px; 
+}
+#code_download{
+    float: left;
+    width: 105px;
+    height: 140px;
+    padding: 10px 15px 0px 15px;
+    background: #1c5896; 
+}
+#code_download img{
+    width: 105px;
+    height: 105px;
+    display: block;
+    vertical-align: top;
+
+}
+#code_download span{
+    display: block;
+    width: 105px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 34px;
+    color: #fff; 
+}
+#phone_download{
+    float: right;
+    width: 242px;
+    height: 150px;
+}
+#phone_download a{
+    display: block;  
+    width: 242px;
+    height: 72px;
+    background: url(../img/askdao/f_spr.png) no-repeat;
+}
+#phone_download :nth-child(1){
+    background-position: 0px -166px;
+}
+#phone_download :nth-child(2){
+    margin-top: 6px;
+    background-position: 0px -312px;
+}
+
+#picture{
+    width: 1100px;
+    padding:770px 0px 0px 100px; 
+}
+#ol{
+    width: 1100px;
+    height: 484px;
+    text-align:left;
+    font-size: 16px;
+    line-height: 24px; 
+}
+#ol ol{
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+#ol li h2{
+    height: 484px;
+    width: 89px;
+    font-weight: normal;
+    position: absolute;
+    top: 0px;
+    z-index: 1000;
+    cursor: pointer;
+     transition: 1s;
+    -moz-transition: 1s; /* Firefox 4 */
+    -webkit-transition: 1s; /* Safari and Chrome */
+    -o-transition: 1s; /* Opera */
+}
+#ol li h2 img{
+    vertical-align: top;
+}
+#ol li div{
+    position: absolute;
+    height: 484px;
+    width: 655px;
+    padding-left: 89px;
+    position: absolute;
+    top: 56px;
+    z-index: 100;
+     transition: 1s;
+    -moz-transition: 1s; /* Firefox 4 */
+    -webkit-transition: 1s; /* Safari and Chrome */
+    -o-transition: 1s; /* Opera */
+}
+.item1{
+    left:0px;
+}
+.item2{
+    left:89px;
+}
+.item3{
+    left:178px;
+}
+.item4{
+    left:267px;
+}
+.item5{
+    left:356px;
+}
+#div1{
+    left:0px;
+}
+#div2{
+    left:89px;
+}
+#div3{
+    left:178px;
+}
+#div4{
+    left:267px;
+}
+#div5{
+    left:356px;
+
+}
+#footer{
+    width: 100%;
+    height: 170px;
+    background: url(../img/askdao/footer1.gif)no-repeat center top;
+}
+

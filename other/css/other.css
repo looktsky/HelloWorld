@@ -1,0 +1,171 @@
+/* 
+* @Author: anchen
+* @Date:   2016-06-12 21:13:33
+* @Last Modified by:   61720
+* @Last Modified time: 2016-08-18 09:57:02
+*/
+/*默认样式重置*/
+body,ul,li,p,h1,h2,h3,input{margin: 0;padding: 0;}
+img,input{border: none;}
+input{background: none;}
+a{text-decoration:none;}
+li,ul{list-style: none;}
+body{
+    position: relative;
+    background:#dfdddd;
+}
+h2{
+    font: 25px/35px normal Arial,Tahoma,Helvetica;
+}
+h3{
+    font: 14px/20px normal Arial,Tahoma,Helvetica;
+}
+/*作品样式*/
+.demo{
+    text-align: center;
+    width: 1000px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top:40px;
+    border: 1px solid red;
+
+}
+/*顶部字母样式*/
+#top_title{
+    width: 960px;
+    height: 170px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius:2px;background:#f5f5f5;
+    margin-bottom: 400px;
+    position: relative;
+ }
+#top_title>ul li{
+    display: inline-block;
+    font: 120px/150px  Arial,Tahoma,Helvetica;
+    width: 115px;height: 150px;
+    text-align: center;
+    vertical-align: middle;
+    float: left;color:#70ad47;}
+
+
+/*顶部下拉菜单开关*/
+#top_title #top_title_key{
+    width:35px ;
+    height: 20px;
+    position: absolute;
+    top: 130px;right: 10px;
+    background:#000000;
+    box-shadow: 2px 2px 5px #cac9c9;
+    border-radius:2px;
+    font:14px/20px Arial,Tahoma,Helvetica;
+    transition: 2s;
+    -moz-transition: 2s; /* Firefox 4 */
+    -webkit-transition: 2s; /* Safari and Chrome */
+    -o-transition: 2s; /* Opera */}
+#top_title #top_title_key {
+    color: #ffffff;}
+
+
+/*顶部下拉菜单*/
+#top_title #piano{
+    width: 960px ;
+    height: 286px;
+    border: 1px solid black;
+    position: absolute;
+    top:190px;left: -1px;
+    background:#ffffff;
+    z-index: 5;
+    display: none;}
+#top_title #piano li{
+    width: 115px;
+    height: 30px ;
+    display: inline-block;
+    text-align:center;
+    float: left;
+    font:14px/30px Arial,Tahoma,Helvetica ;}
+#top_title #piano #piano_middle{
+    background: no-repeat;
+    position: absolute;
+    top: 20px;left: 0px;
+    width: 960px;
+    height: 286px;
+    border:1px solid black;
+    position: absolute;
+    top:30px;
+    left:-1px;}
+#top_title #piano #piano_left,#top_title #piano #piano_right{
+    width: 30px;
+    height: 60px;}
+#top_title #piano #piano_left a,#top_title #piano #piano_right a{
+    display: block;
+    width: 30px;
+    height: 60px;}
+#top_title #piano #piano_left{
+    position: absolute;
+    top:111px;
+    left: 0px;
+    background: url(../img/left.gif) no-repeat;opacity: 0.5;}
+#top_title #piano #piano_right{
+    position: absolute;
+    top:111px;
+    right: 0px;
+    background: url(../img/right.gif) no-repeat;opacity: 0.5;}
+
+.bdfor{
+    display: block;
+    width: 654px;
+    height: 50px;
+    margin:0 auto;
+    vertical-align: middle;
+
+}
+.bdfor img{
+    margin-top: 50px;
+}
+.bdfor input{
+    display: block;
+    float: left;
+    font: 20px/50px Arial,Tahoma,Helvetica ;
+}
+#bdkw{
+    padding-left: 10px;
+    width: 540px;
+    height: 50px;
+    border: 1px solid black;
+}
+#bdsu{
+    background: #fff;
+    width: 104px;
+    height: 50px;
+}
+#bdUl{
+    margin-left:175px;
+    height: 500px; 
+    text-align: left;
+}
+#bdUl li{
+    height: 30px;
+}
+#bdUl li a{
+    color: red;
+    font: 16px/30px Arial,Tahoma,Helvetica ;
+}
+/*本站LKT账号*/
+.lycontent{
+    width: 400px;
+    margin-top: 50px;
+    float: left;
+    text-align: center;
+    background: #fff；
+}
+.form1{
+    width: 400px;
+    float: right;
+    margin: 50px 50px 100px 0px;
+    text-align: left;
+    font: 16px/30px Tahoma,Helvetica ;
+}
+.form1 input{
+    background: #fff;
+}

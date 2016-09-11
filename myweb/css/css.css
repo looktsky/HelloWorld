@@ -1,0 +1,429 @@
+/* 
+* @Author: 杨佳澍
+* @Date:   2016-05-09 09:41:18
+* @Last Modified by:   anchen
+* @Last Modified time: 2016-05-31 13:39:38
+*/
+
+/*默认样式重置*/
+body,ul,li,p,h1,h2,h3,input{margin: 0;padding: 0;}
+img,input{border: none;}
+input{background: none;}
+a{text-decoration:none;}
+li,ul{list-style: none;}
+body{position: relative;background:#dfdddd;min-width: 960px;}
+/*顶部自己加的主体*/
+#main_body{
+    width:1000px;
+    margin: 0 auto;
+    background:#ffffff;
+    border-radius:2px;
+    overflow: hidden;
+    font-family:Arial,Tahoma,Helvetica; }
+
+/*顶部字母样式*/
+#top_title{
+    width: 96%;
+    height: 170px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius:2px;background:#f5f5f5;
+     position: relative;}
+#top_title>ul li{
+    display: inline-block;
+    font: 120px/150px  Arial,Tahoma,Helvetica;
+    width: 115px;height: 150px;
+    text-align: center;
+    vertical-align: middle;
+    float: left;color:#70ad47;}
+
+
+/*顶部下拉菜单开关*/
+#top_title #top_title_key{
+    width:35px ;
+    height: 20px;
+    position: absolute;
+    top: 130px;right: 10px;
+    background:#000000;
+    box-shadow: 2px 2px 5px #cac9c9;
+    border-radius:2px;
+    font:14px/20px Arial,Tahoma,Helvetica;
+    transition: 2s;
+    -moz-transition: 2s; /* Firefox 4 */
+    -webkit-transition: 2s; /* Safari and Chrome */
+    -o-transition: 2s; /* Opera */}
+#top_title #top_title_key {
+    color: #ffffff;}
+
+
+/*顶部下拉菜单*/
+#top_title #piano{
+    width: 960px ;
+    height: 317px;
+    border: 1px solid black;
+    position: absolute;
+    top:190px;left: -1px;
+    background:#ffffff;
+    z-index: 5;
+    display: none;}
+#top_title #piano li{
+    width: 115px;
+    height: 30px ;
+    display: inline-block;
+    text-align:center;
+    float: left;
+    font:14px/30px Arial,Tahoma,Helvetica ;}
+#top_title #piano #piano_middle{
+    position: absolute;
+    top: 20px;left: 0px;
+    width: 960px;
+    height: 286px;
+    border:1px solid black;
+    position: absolute;
+    top:30px;
+    left:-1px;}
+#top_title #piano #piano_left,#top_title #piano #piano_right{
+    width: 30px;
+    height: 60px;}
+#top_title #piano #piano_left a,#top_title #piano #piano_right a{
+    display: block;
+    width: 30px;
+    height: 60px;}
+#top_title #piano #piano_left{
+    position: absolute;
+    top:111px;
+    left: 0px;
+    background: url(../img/left.gif);opacity: 0.5;}
+#top_title #piano #piano_right{
+    position: absolute;
+    top:111px;
+    right: 0px;
+    background: url(../img/right.gif);opacity: 0.5;}
+
+
+/*导航栏样式*/
+#web_nav{
+    width: 0px;
+    height: 25px;
+    margin: 0 auto;
+    margin-top:20px;
+    border-radius:2px;
+    background-color:black;
+    transition: 2s;
+    -moz-transition: 2s; /* Firefox 4 */
+    -webkit-transition: 2s; /* Safari and Chrome */
+    -o-transition: 2s; /* Opera */}
+#web_nav ul li{
+    width: 240px;
+    height:30px;
+    font: 15px/25px Arial,Tahoma,Helvetica;
+    display: inline-block;
+    float: left;
+    text-align: center;}
+#web_nav ul li a{
+    color: #ffffff;}
+#web_nav ul li a:hover{
+    color:orange;}
+
+
+/*左侧上面的插件*/
+#plug_music{
+    background: url(../img/tusiNo1.gif) no-repeat center center;
+     width: 48px;
+     height: 48px;
+     background-size: 48px 48px;
+     position: fixed;
+     top:10%;
+     left: 3.5%;
+     border:6px solid orange;
+     border-radius: 2px;
+     z-index: 10;}
+#plug_music a{
+    padding:24px;
+}
+
+/*左侧上面的插件*/
+#web_plug_in{
+    width:120px;
+    height: 60px;
+    position: fixed;
+    top:34%;
+    left: 2%;
+    z-index: -5;}
+#web_plug_in iframe {
+    width:120px; 
+    height:20px;
+    background: #ffffff;
+    border-radius: 2px;}
+#web_plug_in input{
+    width:120px;
+    height:20px;
+    font: 13px/20px Arial,Tahoma,Helvetica;
+    color: black;background: rgb(189,214,238);
+    margin: 10px 0px;
+    border-radius: 2px;}
+
+
+
+/*左侧下面的插件*/
+#web_aside_left{
+    width: 120px;
+    height: 230px;
+    position: fixed;
+    top:50%;
+    left: 2%;
+    border-radius:2px;
+    background:#ffffff;
+    padding-top: 0px;
+    z-index: -5;}
+#web_aside_left li{
+    width: 100px;
+    height:20px;
+    font:12px/21px Arial,Tahoma,Helvetica;
+    text-align: center;
+    border-radius:4px; 
+    margin: 20px auto;
+    background:black;
+    border:1px solid black;
+    transition: 1s;
+    -moz-transition: 1s; /* Firefox 4 */
+    -webkit-transition: 1s; /* Safari and Chrome */
+    -o-transition: 1s; /* Opera */}
+#web_aside_left li a{
+    color: white;}
+#web_aside_left div{
+    width:8px;
+    height:8px;
+    border:1px solid black;
+    border-radius:8px;
+    float: left;
+    margin: 5px 2px 5px 4px;background: #ffffff;
+    transition: 1s;
+    -moz-transition: 1s; /* Firefox 4 */
+    -webkit-transition: 1s; /* Safari and Chrome */
+    -o-transition: 1s; /* Opera */}
+
+
+/*主要内容的标题*/
+.web_h2{
+    position: absolute;
+    top: -30px ;
+    left: 0px;
+    width: 96%;
+    height: 30px;
+    vertical-align: middle;}
+.web_h2>h2{
+    vertical-align:middle;
+    font:16px/30px normal Arial,Tahoma,Helvetica;
+    border-radius:2px;}
+.web_h2>div{
+    width: 16px;
+    height: 16px;
+    background:#000000;
+    float: left;
+    margin: 7px 7px 7px 4px;}
+
+
+/*前端练习*/
+#web_exercise{
+    width: 0px;
+    height:464px;
+    background: #ebf6f8;
+    margin:0 auto;
+    margin-top:50px; 
+    position: relative;
+    border-radius:2px;
+    transition: 1s;
+    -moz-transition: 1s; /* Firefox 4 */
+    -webkit-transition: 1s; /* Safari and Chrome */
+    -o-transition: 1s; /* Opera */}
+#web_exercise>div>div{
+    background: #f8bb03;}
+#web_exercise ul li {
+    width: 200px; 
+    height: 200px;
+    display: inline-block;
+    float: left;
+    margin: 10px 0px 10px 25px ;
+    position: relative;
+    overflow: hidden;
+    border-radius:2px;
+    opacity: 0.7;
+    border:4px solid #f6e49d;}
+#web_exercise ul li a {
+    width: 200px; 
+    height: 200px;
+    display: inline-block;
+    font:18px/30px  Arial,Tahoma,Helvetica;
+    color: black;
+    text-indent: 2em;}
+#web_exercise ul li div{
+    width: 200px; 
+    height: 200px;
+    background: #b5b3b3;
+    opacity: 0.7;
+    position: absolute;
+    top:-200px;
+    left:0px;
+    transition: 1s;
+    -moz-transition: 1s; /* Firefox 4 */
+    -webkit-transition: 1s; /* Safari and Chrome */
+    -o-transition: 1s; /* Opera */}
+#web_exercise ul li:nth-child(1){
+    background: url(../img/tmall.gif);
+    background-size:200px 200px;}
+
+
+/*前端技能*/
+#web_skill{
+    width: 96%;
+    height:460px;
+    margin:0px auto;
+    margin-top:50px; 
+    position: relative;
+    border-radius:2px;
+    background:#ebf8eb ;}
+#web_skill>div>div{
+    background: #14ae27;}
+#web_skill ul li{
+    width: 900px;
+    height: 30px;
+    margin:15px 40px;
+    position: relative;
+    right: 1000px; 
+    font:14px/28px normal Arial,Tahoma,Helvetica;
+    padding-right:96%;
+    transition: 1s;
+    -moz-transition: 1s; /* Firefox 4 */
+    -webkit-transition: 1s; /* Safari and Chrome */
+    -o-transition: 1s; /* Opera */ }
+#web_skill ul li div{
+    height: 10px;
+    background:black;
+    margin:10px 20px; 
+    position: absolute;
+    top: 0px ;
+    left: 90px;
+    border-radius:2px;}
+#web_skill ul li #skills1{
+    width:600px; }
+#web_skill ul li #skills2{
+    width:500px; }
+#web_skill ul li #skills3{
+    width:500px; }
+#web_skill ul li #skills4{
+    width:300px; }
+#web_skill ul li #skills5{
+    width:100px; }
+#web_skill ul li h3{
+    font: 14px/28px normal Arial,
+    Tahoma,Helvetica;
+    width: 90px;
+    height: 30px; }
+
+
+/*关于本站*/
+#web_introduce{
+    width: 96%;
+    margin:0px auto;
+    margin-top:50px;
+    position: relative;
+    border-radius:2px;
+    overflow: hidden;
+    background: #f8f8eb; }
+#web_introduce>div>div{
+    background: #0e9fc9;}
+#web_introduce article{
+    width: 930px;
+    margin: 0 auto;
+    padding-left: 1000px;
+    transition: 1s;
+    -moz-transition: 1s; /* Firefox 4 */
+    -webkit-transition: 1s; /* Safari and Chrome */
+    -o-transition: 1s;/* Opera */}
+#web_introduce article p{
+    text-indent:2em;
+    font:14px/24px normal Arial,Tahoma,
+    Helvetica;
+    margin:0px 20px;}
+#web_introduce article .why{
+    font-weight:bold;
+    color: red}
+#web_introduce article a{
+    display: black;
+    font:12px/28px normal Arial,
+    Tahoma,Helvetica;}
+
+
+/*联系到我*/
+#personal_infomation{
+    width: 96%;
+    height:390px;
+    background: #ebf6f8;
+    margin:0px auto;
+    margin-top:50px;
+    position: relative;
+    border-radius:2px;
+    padding-left:960px;
+    transition: 1s;
+    -moz-transition: 1s; /* Firefox 4 */
+    -webkit-transition: 1s; /* Safari and Chrome */
+    -o-transition: 1s;/* Opera */ }
+#personal_infomation #personal_QQ{
+    width:300px;
+    height:330px;
+    background: url(../img/qqMe.gif)no-repeat bottom center;
+    background-size:300px 300px;
+    position: absolute;
+    top: 30px;
+    left:30px;
+    text-align: center;}
+#personal_infomation #personal_V{
+    width:300px;
+    height:330px;
+    background: url(../img/VMe.gif)no-repeat bottom center;
+    background-size:300px 300px;
+    position: absolute;
+    top: 30px;
+    right:30px;
+    text-align: center;}
+#personal_infomation #personal_menu{
+    width:300px;
+    height:300px;
+    position: absolute;
+    top: 30px;
+    right:330px;}
+#personal_infomation #personal_menu ul li{
+    width: 100px;
+    height: 30px;
+    font:14px/30px normal Arial,Tahoma,Helvetica;
+    text-align: center;
+    margin:20px 0px;
+    background: black;
+    margin:80px auto;
+    border-radius:2px;
+    box-shadow: 2px 2px 5px #cac9c9;}
+#personal_infomation #personal_menu ul li a {
+    color:white;}
+#personal_infomation #personal_menu ul li a:hover{
+    color: yellow;
+}
+
+
+/*网站结尾*/
+#end{
+    width: 96%;
+    height:20px;
+    border:1px solid black;
+    margin:0px auto;
+    margin-top:20px;
+    margin-bottom: 20px;
+    border-radius:2px;
+    font:20px/20px normal Arial,Tahoma,Helvetica;
+    text-align: center;
+    background: black;
+    color: white;}
+
+
+
+

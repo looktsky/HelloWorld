@@ -1,0 +1,161 @@
+/*
+* @Author: 61720
+* @Date:   2016-08-03 19:34:05
+* @Last Modified by:   61720
+* @Last Modified time: 2016-08-18 11:39:41
+*/
+
+body{
+    font-family:Microsoft Yahei;
+}
+
+ul,li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+#navBar{
+    background: #000;
+    height: 64px;
+}
+
+
+
+#navBar h1{
+
+    margin:0;
+    line-height: 64px;
+    font-size: 16px;
+
+    color: #ff5500;
+
+}
+
+#navBar ul li {
+    margin: 5px 10px;
+    float: left;
+}
+#navBar ul li a{
+    font-size:16px;
+    line-height: 30px;
+    color: #ff5500;
+    padding: 12px 14px;
+}
+
+#header{
+    background: #f1edc7;
+    height: 820px;
+    overflow: hidden;
+}
+#header strong{
+    font-weight: normal;
+}
+#header h2{
+    margin-top: 80px;
+    font-size:30px;
+}
+#header p{
+    font-size:18px;
+    text-align: center;
+    margin-top: 45px;
+
+}
+
+
+#content>div>div{
+    margin-top: 30px;
+    height: 300px;
+    background: #fff;
+    margin-bottom: 130px;
+}
+#content>div>div>h3{
+    color: #ff5500;
+    font-size:20px;
+}
+#content>div>div>p{
+    margin-top: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    text-indent: 2em;
+}
+
+
+#footer{
+    background: #000;
+    height:180px;
+}
+#footer p{
+    margin-top: 130px;
+    color: #ff5500;
+    font-size:16px;
+    text-align: center;
+}
+#paper{
+    display: none;
+    font-size: 20px;
+    line-height: 40px;
+    color: darkgreen;
+    text-align: center;
+}
+#paper:after{
+    content: "_";
+    -webkit-animation:flash 0.6s steps(2,start) infinite;
+    -o-animation:flash 0.6s steps(2,start) infinite;
+    animation:flash 0.6s  steps(2,start) infinite;
+
+}
+#paper.end:after{
+    display: none;
+}
+
+/*.btnPC{*/
+/*width:100px;*/
+/*height:50px;*/
+/*}*/
+/*.btnMob{*/
+/*width:100px;*/
+/*height:50px;*/
+/*}*/
+
+
+
+/*#ppp{*/
+    /*color: red;*/
+    /*animation: move 2s ;*/
+/*}*/
+/*@keyframes move {*/
+    /*0%{*/
+        /*font-size: 18px;*/
+    /*}*/
+    /*25%{*/
+        /*font-size: 38px;*/
+    /*}*/
+    /*50%{*/
+        /*font-size: 58px;*/
+    /*}*/
+    /*75%{*/
+        /*font-size: 78px;*/
+    /*}*/
+    /*100%{*/
+        /*font-size: 98px;*/
+    /*}*/
+/*}*/
+
+@keyframes flash {
+      0%{
+          visibility: visible;
+      }
+      100%{
+          visibility:hidden ;
+      }
+  }
+@-webkit-keyframes flash {
+    0%{
+        visibility: visible;
+    }
+    100%{
+        visibility:hidden ;
+    }
+}

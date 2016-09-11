@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJax</title>
+</head>
+<body>
+
+<input class="btn1" type="button" value="请求">
+<input class="text1" type="text" placeholder="回应的数据显示在这里">
+
+
+</body>
+
+
+<script src="js/jquery-1.12.3.js"></script>
+<script>
+    $(".btn1").on("click",function () {
+        $.ajax({
+            url:"http://www.looktsky.com/demo/demo3/php/demo3.php" ,
+            type:"post",
+            success:function (data) {
+                console.log('请求成功' + data)
+                $(".text1").attr("value",data);
+        }
+        })
+    })
+</script>
+</html>

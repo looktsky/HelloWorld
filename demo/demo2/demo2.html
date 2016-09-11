@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sport</title>
+    <style>
+        *{
+            padding:0;
+            margin: 0;
+        }
+        #gun div{
+            position: absolute;
+        }
+        #gun .aside{
+            width:100px;
+            height:100px;
+            top:-50px;
+            right:0px;
+            background-color: black;
+        }
+        #gun{
+            margin: 400px auto;
+            position: relative;
+            width: 1000px;
+            height: 200px;
+        }
+
+        #gun .div1{
+            width:300px;
+            height:14px;
+            top:0;
+            left:0;
+            background-color: black;
+        }
+        #gun .div2{
+            width:20px;
+            height: 60px;
+            background-color: black;
+            top:15px;
+            left:20px;
+        }
+        #gun .div3{
+            width:30px;
+            height: 100px;
+            background-color: black;
+            top:15px;
+            left:120px;
+        }
+        #gun .bullet{
+            width:20px;
+            height: 10px;
+            background: red;
+            left: 125px;
+        }
+        #gun .div4{
+            top: 2px;
+        }
+        #gun .div5{
+            top: 22px;
+        }
+        #gun .div6{
+            top: 42px;
+        }
+        #gun .div7{
+            top: 62px;
+        }
+        #gun .div8{
+            top: 82px;
+        }
+        #gun .div9{
+             top: 102px;
+         }
+        #gun .trigger{
+            width: 200px;
+            height:40px;
+            bottom: 0px;
+            left:40px;
+        }
+        #gun .trigger input{
+            margin-left: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="gun">
+    <div class="aside"></div>
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div3"></div>
+    <div class="div4 bullet">
+
+    </div>
+    <div class="div5 bullet"></div>
+    <div class="div6 bullet"></div>
+    <div class="div7 bullet"></div>
+    <div class="div8 bullet"></div>
+    <div class="div9 bullet"></div>
+    <div class="trigger">
+        <input class="btn1" type="button" value="射击">
+        <input class="btn2" type="button" value="重置">
+    </div>
+</div>
+</body>
+<script src="js/jquery-1.12.3.js"></script>
+<script>
+    var btn1 = $(".btn1");
+    var btn2 = $(".btn2");
+    var blt1 = $(".div4");
+    var blt2 = $(".div5");
+    var blt3 = $(".div6");
+    var blt4 = $(".div7");
+    var blt5 = $(".div8");
+    var blt6 = $(".div9");
+    var i = true;
+    btn1.on("click",function () {
+        if(i){
+            i=false;
+            blt1.animate({left:"890px"},1000,function () {
+                $(this).css({"display":"none"})
+                blt2.animate({top:"2px"},1000,function () {
+                    $(this).animate({left:"890px"},1000,function () {
+                        $(this).css({"display":"none"})
+                        blt3.animate({top:"2px"},1000,function () {
+                            $(this).animate({left:"890px"},1000,function () {
+                                $(this).css({"display":"none"})
+                                blt4.animate({top:"2px"},1000,function () {
+                                    $(this).animate({left:"890px"},1000,function () {
+                                        $(this).css({"display":"none"})
+                                        blt5.animate({top:"2px"},1000,function () {
+                                            $(this).animate({left:"890px"},1000,function () {
+                                                $(this).css({"display":"none"})
+                                                blt6.animate({top:"2px"},1000,function () {
+                                                    $(this).animate({left:"890px"},1000,function () {
+                                                        $(this).css({"display":"none"})
+                                                        i = true;
+                                                    });
+                                                });
+                                            });
+                                        });
+                                    });
+                                });
+                            });
+                        });
+                    });
+                });
+            });
+        }
+
+    });
+    btn2.on("click",function () {
+        i = true;
+        blt1.stop().css({"left":"125px","display":"block"});
+        blt2.stop().css({"left":"125px","top":"22px","display":"block"});
+        blt3.stop().css({"left":"125px","top":"42px","display":"block"});
+        blt4.stop().css({"left":"125px","top":"62px","display":"block"});
+        blt5.stop().css({"left":"125px","top":"82px","display":"block"});
+        blt6.stop().css({"left":"125px","top":"102px","display":"block"});
+    })
+
+
+
+
+</script>
+</html>
